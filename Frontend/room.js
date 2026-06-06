@@ -1,4 +1,5 @@
-    const backend = "http://localhost:3000"
+    // const backend = "http://localhost:3000"
+    const backend = "https://collab-backend-app.onrender.com"
     const socket = io(backend)
 
     let autoSaveTimeout = null

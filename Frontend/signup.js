@@ -1,4 +1,5 @@
-backend = "http://localhost:3000"
+// backend = "http://localhost:3000"
+const backend = "https://collab-backend-app.onrender.com"
 
 function handleformsubmit(event){
     event.preventDefault()
