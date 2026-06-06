@@ -357,6 +357,11 @@
 
             const whiteboard = res.data.whiteboard
 
+            if (!whiteboard) {
+                console.log("New room detected. Starting with a blank workspace.")
+                return 
+            }
+
             const {canvasMemory,stickyNotes} = whiteboard
 
             if(canvasMemory){
