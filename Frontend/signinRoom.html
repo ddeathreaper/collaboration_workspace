@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Room</title>
+    <link rel="stylesheet" href="signinRoom.css">
+</head>
+<body>
+    <div class="card-container">
+        <h2>Join Room</h2>
+        <form action="/join-room" class="room-form" onsubmit="handleformsubmit(event)">
+            <div class="input-group">
+                <label for="roomId">Room Id</label>
+                <input type="text" id="roomId" name="roomId" required autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="join-btn">JOIN</button>
+        </form>
+        <a href="./createRoom.html"><button class="goto-btn">Create Room</button></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signinroom.js"></script>
+</body>
+</html>

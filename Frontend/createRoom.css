@@ -1,0 +1,127 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Room Details Container Card */
+.card-container {
+    background: #191b21;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.room-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Form Layout (keeping the horizontal structure from the image) */
+.input-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Labels */
+.input-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    width: 30%;
+}
+
+/* Input Fields */
+.input-group input {
+    width: 65%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+
+.input-group select {
+    width: 65%; /* Matches input width */
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+.input-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+/* Primary Join Button */
+.create-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+.goto-btn{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: opacity 0.2s ease, transform 0.1s ease;   
+}
+.join-btn:hover {
+    opacity: 0.9;
+}
+
+.join-btn:active {
+    transform: scale(0.98);
+}

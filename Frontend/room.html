@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Workspace</title>
+    <link rel="stylesheet" href="room.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="app-header">
+
+        <div class="logo">
+            <i class="fa-regular fa-handshake"></i>
+            <span>Collab</span>
+        </div>
+
+        <div class="usersBar" id="userDropdown">
+            <h3> Active users</h3>
+            <ul id="usersList"></ul>
+        </div>
+
+
+
+
+        <div class="room-info">
+            <span id="room-id-display">Room: Loading...</span>
+            <button id="copy-btn" title="Copy Room ID"><i class="fa-regular fa-copy"></i></button>
+        </div>
+
+
+
+        <nav class="view-switcher">
+            <button class="nav-tab active" id="tab-whiteboard" data-target="whiteboard-view">
+                <i class="fa-solid fa-palette"></i> Whiteboard
+            </button>
+
+            <button class="nav-tab" id="tab-code" data-target="code-view">
+                <i class="fa-solid fa-code"></i> Code Editor
+            </button>
+
+        </nav>
+        
+        <button id="leave-btn" class="btn-leaveroom">Leave Room</button>
+    </header>
+
+    <main class="workspace-container">
+        
+        <section id="whiteboard-view" class="workspace-panel active">
+            <div class="toolbar">
+                <button class="tool-btn active" id="tool-pencil" title="Pencil"><i class="fa-solid fa-pencil"></i></button>
+                <button class="tool-btn" id="tool-rectangle" title="Rectangle"><i class="fa-regular fa-square"></i></button>
+                <button class="tool-btn" id="tool-circle" title="Circle"><i class="fa-regular fa-circle"></i></button>
+                <button class="tool-sticky" id="tool-sticky" title="Add Sticky Note"><i class="fa-regular fa-note-sticky"></i></button>
+                <div class="tool-divider"></div>
+                <input type="color" id="color-picker" value="#2563eb" title="Choose Color">
+                <select id="brush-size" title="Brush Size">
+                    <option value="2">Thin</option>
+                    <option value="5" selected>Medium</option>
+                    <option value="10">Thick</option>
+                </select>
+                <button class="tool-btn" id="tool-clear" title="Clear Canvas"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            
+            <div class="canvas-wrapper" id="canvas-container">
+                <canvas id="whiteboard-canvas"></canvas>
+                </div>
+        </section>
+
+        <section id="code-view" class="workspace-panel">
+            <div class="editor-controls">
+                <select id="language-select">
+                    <option value="javascript">JavaScript</option>
+                    <option value="htmlmixed">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="python">Python</option>
+                </select>
+                <span class="editor-status"><i class="fa-solid fa-circle text-success"></i> Syncing live</span>
+            </div>
+            <div class="editor-wrapper">
+                <textarea id="code-editor" placeholder="// Start coding here..."></textarea>
+            </div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="room.js"></script>
+    </body>
+</html>

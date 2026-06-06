@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Cool Coding and Drawing Room</title>
+    <link rel="stylesheet" href="roomTest.css">
+</head>
+<body>
+
+    <div class="my-header">
+        <h1>Welcome to Room: <span id="room-id">12345</span></h1>
+        <button id="btn-show-whiteboard" onclick="showWhiteboard()">Go to Whiteboard</button>
+        <button id="btn-show-code" onclick="showCode()">Go to Code Editor</button>
+    </div>
+
+    <div id="whiteboard-page">
+        <h3>My Whiteboard</h3>
+        
+        <div class="my-tools">
+            Color: <input type="color" id="my-color" value="#000000">
+            Brush Size: 
+            <select id="my-size">
+                <option value="2">Small</option>
+                <option value="5">Medium</option>
+                <option value="10">Big</option>
+            </select>
+            <button onclick="clearCanvas()">Clear All</button>
+            <button onclick="addStickyNote()">Add Sticky Note</button>
+        </div>
+
+        <div id="canvas-holder">
+            <canvas id="my-canvas" width="800" height="500"></canvas>
+        </div>
+    </div>
+
+    <div id="code-page" style="display: none;">
+        <h3>Type Code Here</h3>
+        <p>Everything you type here sends to other users!</p>
+        <textarea id="my-textarea" rows="25" cols="80" placeholder="write code here..."></textarea>
+    </div>
+
+    <script src="roomTest.js"></script>
+</body>
+</html>

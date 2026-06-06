@@ -1,0 +1,119 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Login Container Card */
+.login-box {
+    background: #191b21;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form Layout */
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login-form h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Labels and Inputs */
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Primary Login Button */
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Secondary Navigation Buttons (Signup / Forgot Pass) */
+.login-box a {
+    text-decoration: none;
+    display: inline-block;
+    width: 48%; /* Places them side-by-side if room allows */
+    margin: 15px 1% 0 1%;
+}
+
+.login-box a button {
+    width: 100%;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    padding: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-box a button:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}

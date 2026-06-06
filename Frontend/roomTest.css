@@ -1,0 +1,86 @@
+/* Make it look like a classic 2010s web app */
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.my-header {
+    background-color: white;
+    padding: 15px;
+    border: 3px solid black;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: yellow;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+/* Whiteboard elements */
+#whiteboard-page {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 3px solid black;
+}
+
+.my-tools {
+    margin-bottom: 10px;
+    background-color: #eee;
+    padding: 10px;
+    border: 1px dashed black;
+}
+
+#canvas-holder {
+    position: relative; /* Crucial so sticky notes stay inside */
+    width: 800px;
+    height: 500px;
+}
+
+#my-canvas {
+    background-color: white;
+    border: 2px solid red;
+}
+
+/* Sticky Note Style */
+.sticky {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: pink;
+    border: 2px solid magenta;
+    padding: 5px;
+    cursor: move;
+}
+
+.sticky textarea {
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: none;
+    resize: none;
+}
+
+/* Code Page elements */
+#code-page {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border: 3px solid black;
+}
+
+#my-textarea {
+    background-color: black;
+    color: lime; /* Classic hacker look */
+    font-family: monospace;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}

@@ -1,0 +1,139 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Central Signup Container/Form Card */
+#signup-form {
+    background: #191b21;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Text (Optional: if you decide to add an <h2>Signup</h2> inside the form later) */
+#signup-form h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form Element Layout */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Spacing between input blocks */
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Labels and Inputs */
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+    text-transform: uppercase; /* Keeps "NAME", "Email", "Password" consistent */
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Feedback Message Box (Success / Error) */
+.message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    min-height: 20px; /* Prevents the layout from jumping when text appears */
+}
+
+.message.error {
+    color: #dc2626;
+}
+
+.message.success {
+    color: #16a34a;
+}
+
+/* Primary Signup Button */
+button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Secondary Navigation Button (Login Link) */
+a {
+    text-decoration: none;
+    width: 100%;
+    max-width: 400px; /* Matches the width of the card */
+    display: block;
+}
+
+a button {
+    width: 100%;
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+a button:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
