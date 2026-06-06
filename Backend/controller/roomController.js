@@ -9,6 +9,11 @@ function generateToken(id){
 const createRoom = async (req,res)=>{
     try {
         const {roomId, password, codeContent, whiteboardId, language} = req.body
+
+        const room = await Room.findOne({roomId:roomId})
+        if(room){
+            return res.status(400).json({message:"Room already exists"})
+        }
         const saltrounds = 10
         const hash = await bcrypt.hash(password, saltrounds)
 

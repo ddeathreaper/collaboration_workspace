@@ -35,7 +35,11 @@ function handleformsubmit(event){
         window.location.href = "./room.html"
     }).catch(err=>{
         console.log(err)
-        alert("Something went wrong")
+        if (err.response && err.response.data && err.response.data.message) {
+            alert(err.response.data.message)
+        }else{
+            alert("Something went wrong")
+        }
     })
 }
 
